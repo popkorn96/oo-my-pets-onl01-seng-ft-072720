@@ -2,7 +2,6 @@ class Owner
 attr_reader :name, :species
 attr_accessor :pets, :cat, :dog
 @@all = []
-#@@pets = {:cats => [],:dogs => []}
   def initialize(name)
     @name = name
     @species = "human"
@@ -24,10 +23,6 @@ attr_accessor :pets, :cat, :dog
   def self.reset_all
     @@all.clear
   end
-  
-  #def pets
-  #  @@pets
-  #end
   
   def cats
     Cat.all.select{|cat| cat.owner == self}
@@ -64,9 +59,10 @@ attr_accessor :pets, :cat, :dog
       arr.clear
   end
   end
-def list_pets
-  puts "I have #{pets[:dogs].length}dog(s) and #{pets[:cats].length}cat(s)."
-end
+  
+  def list_pets
+    puts "I have #{pets[:dogs].length}dog(s) and #{pets[:cats].length}cat(s)."
+  end
   
   
 end

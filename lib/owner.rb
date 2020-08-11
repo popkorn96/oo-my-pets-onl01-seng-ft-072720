@@ -51,7 +51,8 @@ attr_accessor :pets, :cat, :dog
    end
   end
   def feed_cats
-    @@pets[:cats].collect{|cat| cat.mood = "happy"}
+    cats.each do |cat|
+      cat.mood = "happy"
   end
     
   def sell_pets

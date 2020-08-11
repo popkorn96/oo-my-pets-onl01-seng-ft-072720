@@ -60,7 +60,7 @@ attr_accessor :pets, :cat, :dog
   end
   
   def list_pets
-    puts "I have #{pets[:dogs].length}dog(s) and #{pets[:cats].length}cat(s)."
+    puts "I have #{dogs.length}dog(s) and #{dogs.length}cat(s)."
   end
   
   

@@ -52,7 +52,7 @@ attr_accessor :pets, :cat, :dog
   end
     
   def sell_pets
-    @pets.each do |pet, array_new|
+    pets.each do |pet, array_new|
       array_new.each do |pet|
         pet.mood = 'nervous'
     end
